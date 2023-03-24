@@ -1,0 +1,10 @@
+# 项目排除路径
+/11Enum/target/
+/12Exception/target/
+/13Wrapper/target/
+/14Collection/target/
+/15Generic/target/
+/17Thread/target/
+/19IO/target/
+/21Socket/target/
+/23Reflection/target/
