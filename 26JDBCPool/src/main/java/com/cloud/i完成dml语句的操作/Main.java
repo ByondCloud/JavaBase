@@ -1,0 +1,61 @@
+package com.cloud.i完成dml语句的操作;
+
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+import org.apache.commons.dbutils.QueryRunner;
+import org.junit.Test;
+
+
+import java.io.FileReader;
+import java.sql.Connection;
+import java.util.Properties;
+
+/**
+ * @author ByondCloud
+ * @version 1.0
+ * @Date 2022/11/25
+ * @Time 3:48
+ */
+public class Main {
+    @Test
+    // 修改
+    public void testUpdateDML() throws Exception{
+        Properties properties = new Properties();
+        properties.load(new FileReader("resources/druid.properties"));
+        Connection connection = DruidDataSourceFactory.createDataSource(properties).getConnection();
+        QueryRunner queryRunner = new QueryRunner();
+        String sql = "update test.actor set name = ? where id = ?";
+        // 使用update方法，返回受影响的行数，如果没有生效则返回0
+        int affectedRow = queryRunner.update(connection, sql, "张三丰", 1);
+        System.out.println(affectedRow > 0 ? "执行成功" : "执行失败");
+        connection.close();
+    }
+
+    @Test
+    // 添加
+    public void testInsertDML() throws Exception{
+        Properties properties = new Properties();
+        properties.load(new FileReader("resources/druid.properties"));
+        Connection connection = DruidDataSourceFactory.createDataSource(properties).getConnection();
+        QueryRunner queryRunner = new QueryRunner();
+        String sql = "insert into test.actor values (null, '云之彼端', '男', '1988-05-11', 158590)";
+        // 使用update方法，返回受影响的行数，如果没有生效则返回0
+        int affectedRow = queryRunner.update(connection, sql);
+        System.out.println(affectedRow > 0 ? "执行成功" : "执行失败");
+        connection.close();
+    }
+
+    @Test
+    // 删除
+    public void testDeleteDML() throws Exception{
+        Properties properties = new Properties();
+        properties.load(new FileReader("resources/druid.properties"));
+        Connection connection = DruidDataSourceFactory.createDataSource(properties).getConnection();
+        QueryRunner queryRunner = new QueryRunner();
+        String sql = "delete from test.actor where id = ?";
+        // 使用update方法，返回受影响的行数，如果没有生效则返回0
+        int affectedRow = queryRunner.update(connection, sql, 3);
+        System.out.println(affectedRow > 0 ? "执行成功" : "执行失败");
+        connection.close();
+    }
+
+}

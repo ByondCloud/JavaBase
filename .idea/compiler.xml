@@ -7,19 +7,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="25JDBC" />
+        <module name="17Thread" />
+        <module name="26JDBCPool" />
+        <module name="24MySql" />
+        <module name="21Socket" />
+        <module name="12Exception" />
+        <module name="27Regular" />
+        <module name="23Reflection" />
         <module name="11Enum" />
         <module name="13Wrapper" />
-        <module name="17Thread" />
         <module name="1-6Base" />
         <module name="7-10ObjectOriented" />
         <module name="19IO" />
         <module name="11-2Annotation" />
         <module name="15Generic" />
-        <module name="21Socket" />
         <module name="14Collection" />
-        <module name="12Exception" />
-        <module name="23Reflection" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="26JDBC连接池" target="8" />
+      <module name="27regular" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

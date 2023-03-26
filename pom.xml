@@ -21,7 +21,27 @@
         <module>19IO</module>
         <module>21Socket</module>
         <module>23Reflection</module>
+        <module>24MySql</module>
+        <module>25JDBC</module>
+        <module>26JDBCPool</module>
+        <module>27Regular</module>
+
+
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

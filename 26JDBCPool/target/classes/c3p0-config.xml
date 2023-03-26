@@ -1,0 +1,22 @@
+<c3p0-config>
+<!--    数据源名称代表连接池-->
+    <named-config name="cloud">
+<!--        数据库连接所需要的参数-->
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/test</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+<!--        每次增长的连接数-->
+        <property name="acquireIncrement">5</property>
+<!--        初始连接数-->
+        <property name="initialPoolSize">10</property>
+<!--        最小连接数-->
+        <property name="minPoolSize">5</property>
+<!--        最大连接数-->
+        <property name="maxPoolSize">50</property>
+<!--        可连接的最多的命令对象数 【就是可以执行SQL语句的对象的个数】-->
+        <property name="maxStatements">5</property>
+<!--        每个连接对象可连接的最多的命令对象数-->
+        <property name="maxStatementsPerConnection">2</property>
+    </named-config>
+</c3p0-config>

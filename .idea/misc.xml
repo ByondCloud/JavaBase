@@ -5,11 +5,15 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/25.JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/27Regular/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/16Thread/pom.xml" />
+        <option value="$PROJECT_DIR$/26JDBC连接池/pom.xml" />
+        <option value="$PROJECT_DIR$/27regular/pom.xml" />
       </set>
     </option>
   </component>
